@@ -1,3 +1,4 @@
+canvas();
 forme();
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
@@ -17,12 +18,11 @@ function drop(e){
     e.preventDefault();
     var obj = e.dataTransfer.getData("text");
     e.target.appendChild(document.getElementById(obj));
-    e.currentTarget.className="pleine";
+    e.currentTarget.className="pleins";
     e.stopPropagation();
-    forme();
     id = document.getElementById("forme");
-    id.removeAttribute("id");
     id.setAttribute("draggable","false");
+    forme();
     var nom=e.currentTarget.id;
     nom=nom+"*";
     e.name= nom;
@@ -41,7 +41,6 @@ function canvas(){
     document.getElementsByClassName("class1")[0].appendChild(canva);
 }
 function forme(){
-    canvas()
     var carre = document.getElementById("forme");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue";
