@@ -1,4 +1,4 @@
-forme();
+canvas();
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
 }
@@ -19,7 +19,7 @@ function drop(e){
     e.target.appendChild(document.getElementById(obj));
     e.currentTarget.className="pleine";
     e.stopPropagation();
-    forme();
+    canvas();
     id = document.getElementById("forme");
     id.removeAttribute("id");
     id.setAttribute("draggable","false");
@@ -39,14 +39,15 @@ function canvas(){
     canva.setAttribute('ondragstart','start(event)');
     canva.setAttribute('draggable','true');
     document.getElementsByClassName("class1")[0].appendChild(canva);
+    forme();
 }
 function forme(){
-    canvas()
     var carre = document.getElementById("forme");
-    var f1 = carre.getContext("2d");
+    var f1 = carre.getContext("2d")
     f1.fillStyle = "Blue";
     f1.rect(0,3,40,40);
     f1.fill();
+    
     
 }
 function verif_ligne(x){
