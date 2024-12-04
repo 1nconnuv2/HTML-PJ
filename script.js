@@ -4,9 +4,10 @@ function start(e){
 }
 
 function over(e){
-    if (e.currentTarget.className === "vide")
+    e.preventDefault();
+    if (e.currentTarget.className == "vide")
         e.currentTarget.className="dessus";
-        e.preventDefault();
+        
 }
 
 function leave(e){
@@ -22,12 +23,12 @@ function drop(e){
     id = document.getElementById("forme");
     id.removeAttribute("id");
     id.setAttribute("draggable","false");
-    var nom=e.currentTarget.id
+    var nom=e.currentTarget.id;
     nom=nom+"*";
     e.name= nom;
-    console.log(e.name)
-    e.stopPropagation()
-    verification()
+    console.log(e.name);
+    e.stopPropagation();
+    verification();
 }
 
 function canvas(){
