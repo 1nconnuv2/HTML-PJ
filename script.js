@@ -1,3 +1,53 @@
+forme();
+function start(e){
+    e.dataTransfer.setData("text", e.target.id);
+}
+
+function over(e){
+    if (e.currentTarget.className === "vide")
+        e.currentTarget.className="dessus";
+        e.preventDefault();
+}
+
+function leave(e){
+    e.currentTarget.className="vide";
+}
+function drop(e){
+    e.preventDefault();
+    var obj = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(obj));
+    e.currentTarget.className="pleine";
+    e.stopPropagation();
+    forme();
+    id = document.getElementById("forme");
+    id.removeAttribute("id");
+    id.setAttribute(draggable,false);
+    var nom=e.currentTarget.id
+    nom=nom+"*";
+    e.name= nom;
+    console.log(e.name)
+    e.stopPropagation()
+    verification()
+}
+
+function canvas(){
+    var canva = document.createElement('canvas');
+    canva.setAttribute('id','forme');
+    canva.setAttribute('width','40');
+    canva.setAttribute('height','41');
+    canva.setAttribute('ondragstart','start(event)');
+    canva.setAttribute('draggable','true');
+    document.getElementsByClassName("class1")[0].appendChild(canva);
+}
+function forme(){
+    canvas()
+    var carre = document.getElementById("forme");
+    var f1 = carre.getContext("2d");
+    f1.fillStyle = "Blue";
+    f1.rect(0,3,40,40);
+    f1.fill();
+    
+}
 function verif_ligne(x){
     nb=0;
     var I=x.toString();
@@ -86,51 +136,4 @@ function verification(){
     ligne_pleine.forEach((element) => disparition_ligne(element));
     colonne_pleine.forEach((element) => disparition_colonne(element));
     document.getElementById("score").innerText=parseInt(document.getElementById("score").innerHTML)+nb
-}
-function canvas(){
-    var canva = document.createElement('canvas');
-    canva.setAttribute('id','forme');
-    canva.setAttribute('width','40');
-    canva.setAttribute('height','41');
-    canva.setAttribute('ondragstart','start(event)');
-    canva.setAttribute('draggable','true');
-    document.getElementsByClassName("class1")[0].appendChild(canva);
-}
-function forme(){
-    canvas()
-    var carre = document.getElementById("forme");
-    var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue";
-    f1.rect(0,3,40,40);
-    f1.fill();
-}
-
-function start(e){
-    e.dataTransfer.setData("text", e.target.id);
-}
-
-function over(e){
-    e.currentTarget.className="dessus";
-    e.preventDefault();
-}
-
-function leave(e){
-    e.currentTarget.className="vide";
-}
-
-function drop(e){
-    e.preventDefault();
-    var obj = e.dataTransfer.getData("text");
-    e.target.appendChild(document.getElementById(obj));
-    e.currentTarget.className="pleine";
-    var nom=e.currentTarget.id
-    nom=nom+"*";
-    e.name= nom;
-    console.log(e.name)
-    e.stopPropagation()
-    forme();
-    id = document.getElementById("forme");
-    id.removeAttribute("id");
-    id.setAttribute(draggable,false);
-    verification()
 }
