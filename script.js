@@ -21,7 +21,7 @@ function drop(e){
     forme();
     id = document.getElementById("forme");
     id.removeAttribute("id");
-    id.setAttribute(draggable,false);
+    id.setAttribute("draggable","false");
     var nom=e.currentTarget.id
     nom=nom+"*";
     e.name= nom;
