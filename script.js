@@ -105,7 +105,6 @@ function forme(){
     f1.fill();
 }
 
-
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
 }
