@@ -10,10 +10,15 @@ function over(e){
         
 }
 
+function supprimer(placement){
+    console.log("placement",placement)
+    var carre = document.getElementById(placement);
+    var f1 = carre.getContext("2d");
+    f1.clearRect(0,0,40,41)
+}
 function leave(e){
-    if (e.currentTarget.className=="dessus"){
-        e.currentTarget.className="vide"; 
-    }
+    if (e.currentTarget.className == "dessus")
+        e.currentTarget.className="vide";
 }
 function drop(e){
     e.preventDefault();
@@ -22,13 +27,12 @@ function drop(e){
     e.currentTarget.className="pleine";
     e.stopPropagation();
     id = document.getElementById("carre");
-    id.setAttribute("id","false");
-    id.setAttribute("draggable","false");
-    debut();
     var nom=e.currentTarget.id;
     nom=nom+"*";
-    e.name= nom;
-    console.log("nom du canva",e.name);
+    id.setAttribute("id",nom);
+    id.setAttribute("draggable","false");
+    console.log(id.id)
+    debut();
     e.stopPropagation();
     verification();
 }
@@ -39,7 +43,7 @@ function debut(){
     canva.setAttribute('height','41');
     canva.setAttribute('ondragstart','start(event)');
     canva.setAttribute('draggable','true');
-    document.getElementsByClassName("objet")[0].appendChild(canva);
+    document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue";
@@ -89,11 +93,12 @@ function disparition_ligne(x){
     for(var j=0; j<7;j++){
         var J=j.toString()
         var case_verif= I+"-"+J
-        var canva_suppr=document.getElementsByName(case_verif+"*")
+        var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementsById(case_verif).removeChild(canva)
-            console.log("suppression")
+            console.log(case_verif+"*")
+            supprimer(case_verif+"*");
+            
         }
     }}
 
@@ -103,11 +108,12 @@ function disparition_colonne(x){
         var J=j.toString()
         var case_verif= J+"-"+I
         console.log(case_verif)
-        var canva_suppr=document.getElementsByName(case_verif+"*")
+        var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementById(case_verif).removeChild(canva)
-            console.log("suppression")
+            console.log(case_verif+"*")
+            supprimer(case_verif+"*");
+            
         }
     }}
 
