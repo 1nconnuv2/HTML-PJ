@@ -1,4 +1,13 @@
 #tapis{
+      --taille : 10;
+
+  --titre : 10vh;
+
+  --hauteur : calc(calc(100vh - var(--titre)) - 5px);
+
+  --largeur : calc(100vw - 10px);
+
+  --cote : min(calc(var(--hauteur) / calc(var(--taille) + 7)), calc(var(--largeur) / calc(var(--taille) + 1)));
     margin : auto;
     margin-left: 100PX ;
     width: auto;
