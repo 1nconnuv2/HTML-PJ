@@ -20,12 +20,6 @@
 }
 
 .pleine{
-    background-color : #001affcc;
-    padding : 10px;
-    z-index: 2;
-    width: 18px;
-    margin: 3px;
-    height: 18px;
     display: block;
 }
 .vide{
