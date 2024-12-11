@@ -1,5 +1,4 @@
-canvas();
-forme();
+debut();
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
 }
@@ -20,9 +19,10 @@ function drop(e){
     e.target.appendChild(document.getElementById(obj));
     e.currentTarget.className="pleins";
     e.stopPropagation();
-    id = document.getElementById("forme");
+    id = document.getElementById("carre");
+    id.setAttribute("id","false");
     id.setAttribute("draggable","false");
-    forme();
+    debut();
     var nom=e.currentTarget.id;
     nom=nom+"*";
     e.name= nom;
@@ -30,24 +30,21 @@ function drop(e){
     e.stopPropagation();
     verification();
 }
-
-function canvas(){
+function debut(){
     var canva = document.createElement('canvas');
-    canva.setAttribute('id','forme');
+    canva.setAttribute('id','carre');
     canva.setAttribute('width','40');
     canva.setAttribute('height','41');
     canva.setAttribute('ondragstart','start(event)');
     canva.setAttribute('draggable','true');
-    document.getElementsByClassName("class1")[0].appendChild(canva);
-}
-function forme(){
-    var carre = document.getElementById("forme");
+    document.getElementsByClassName("objet")[0].appendChild(canva);
+    var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue";
     f1.rect(0,3,40,40);
     f1.fill();
-    
 }
+
 function verif_ligne(x){
     nb=0;
     var I=x.toString();
