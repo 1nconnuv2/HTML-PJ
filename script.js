@@ -19,6 +19,7 @@ function supprimer(placement){
     f1.clearRect(0,0,40,41)
     carre.innerHTML=""
 }
+
 function leave(e){
     if (e.currentTarget.className == "dessus")
         e.currentTarget.className="vide";
