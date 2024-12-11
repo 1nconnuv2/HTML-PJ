@@ -46,7 +46,7 @@ function debut(){
     document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue";
+    f1.fillStyle = "Blue" ;
     f1.rect(0,3,40,40);
     f1.fill();
 }
