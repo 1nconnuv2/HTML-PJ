@@ -92,7 +92,7 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementsById(case_verif).removeChild()
+            document.getElementsById(case_verif).removeChild(canva)
             console.log("suppression")
         }
     }}
@@ -106,7 +106,7 @@ function disparition_colonne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementById(case_verif).removeChild()
+            document.getElementById(case_verif).removeChild(canva)
             console.log("suppression")
         }
     }}
