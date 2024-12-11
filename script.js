@@ -15,6 +15,7 @@ function supprimer(placement){
     var carre = document.getElementById(placement);
     var f1 = carre.getContext("2d");
     f1.clearRect(0,0,40,41)
+    f1.setAttribute("class","nean")
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
