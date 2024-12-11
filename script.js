@@ -11,7 +11,7 @@ function over(e){
 }
 
 function leave(e){
-    e.currentTarget.className="vide";
+    e.currentTarget.className="pleine";
 }
 function drop(e){
     e.preventDefault();
