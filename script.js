@@ -10,6 +10,7 @@ function over(e){
         
 }
 
+function suppr
 function leave(e){
     e.currentTarget.className="pleine";
 }
