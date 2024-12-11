@@ -9,7 +9,15 @@
     padding : 0.3vh;
     z-index: 1;
 }
-
+.pleins{
+    background-color : #001affcc;
+    padding : 10px;
+    z-index: 2;
+    width: 18px;
+    margin: 3px;
+    height: 18px;
+    display: block;
+}
 .vide{
     background-color : #cccccccc;
     padding : 10px;
