@@ -9,7 +9,7 @@
 
   --cote : min(calc(var(--hauteur) / calc(var(--taille) + 7)), calc(var(--largeur) / calc(var(--taille) + 1)));
     margin : auto;
-    margin-left: 100PX ;
+    margin: left 0px;;
     width: auto;
     background-color : #c43030;
     border-radius : 1vh;
@@ -18,8 +18,13 @@
     padding : 0.3vh;
     z-index: 1;
 }
+<<<<<<< HEAD
 .pleine{
     background-color : #001affcc;
+=======
+.pleins{
+    background-color : #cccccccc;
+>>>>>>> origin/Feur
     padding : 10px;
     z-index: 2;
     width: 18px;
@@ -55,7 +60,12 @@
     background-color:  #cccccccc;
 } 
 
-.class1{
+#hm{
     text-align: center;
-    background-color:  #cccccccc;
+    background-color:#76adab;
+}
+
+.jouer{
+    text-align: center;
+    background-color:#cccccccc;
 }
