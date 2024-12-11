@@ -10,10 +10,19 @@ function over(e){
         
 }
 
+<<<<<<< HEAD
 function supprimer(){
     var carre = document.getElementById("false");
     var f1 = carre.getContext("2d");
     f1.clearRect(0,0,40,41)
+=======
+function supprimer(placement){
+    console.log("placement",placement)
+    var carre = document.getElementById(placement);
+    var f1 = carre.getContext("2d");
+    f1.clearRect(0,0,40,41)
+    f1.setAttribute("class","nean")
+>>>>>>> plan-travail
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
@@ -26,13 +35,12 @@ function drop(e){
     e.currentTarget.className="pleine";
     e.stopPropagation();
     id = document.getElementById("carre");
-    id.setAttribute("id","false");
-    id.setAttribute("draggable","false");
-    debut();
     var nom=e.currentTarget.id;
     nom=nom+"*";
-    e.name= nom;
-    console.log("nom du canva",e.name);
+    id.setAttribute("id",nom);
+    id.setAttribute("draggable","false");
+    console.log(id.id)
+    debut();
     e.stopPropagation();
     verification();
 }
@@ -93,15 +101,21 @@ function disparition_ligne(x){
     for(var j=0; j<7;j++){
         var J=j.toString()
         var case_verif= I+"-"+J
-        var canva_suppr=document.getElementsByName(case_verif+"*")
+        var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
+<<<<<<< HEAD
 <<<<<<< HEAD
             document.getElementsById(case_verif).removeChild()
 =======
             supprimer();
 >>>>>>> origin/Feur
             console.log("suppression")
+=======
+            console.log(case_verif+"*")
+            supprimer(case_verif+"*");
+            
+>>>>>>> plan-travail
         }
     }}
 
@@ -111,15 +125,21 @@ function disparition_colonne(x){
         var J=j.toString()
         var case_verif= J+"-"+I
         console.log(case_verif)
-        var canva_suppr=document.getElementsByName(case_verif+"*")
+        var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
+<<<<<<< HEAD
 <<<<<<< HEAD
             document.getElementById(case_verif).removeChild()
 =======
             supprimer();
 >>>>>>> origin/Feur
             console.log("suppression")
+=======
+            console.log(case_verif+"*")
+            supprimer(case_verif+"*");
+            
+>>>>>>> plan-travail
         }
     }}
 
