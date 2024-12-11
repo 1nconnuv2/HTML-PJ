@@ -10,7 +10,11 @@ function over(e){
         
 }
 
-function suppr
+function supprimer(){
+    var carre = document.getElementById("false");
+    var f1 = carre.getContext("2d");
+    f1.clearRect(0,0,40,41)
+}
 function leave(e){
     e.currentTarget.className="pleine";
 }
@@ -91,7 +95,7 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementsById(case_verif).removeChild
+            supprimer();
             console.log("suppression")
         }
     }}
@@ -105,7 +109,7 @@ function disparition_colonne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            document.getElementById(case_verif).removeChild
+            supprimer();
             console.log("suppression")
         }
     }}
