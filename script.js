@@ -21,7 +21,7 @@ function drop(e){
     e.currentTarget.className="pleins";
     e.stopPropagation();
     id = document.getElementById("forme");
-    id.setAttribute("draggable","false");
+    id.setAttribute(draggable,false);
     forme();
     var nom=e.currentTarget.id;
     nom=nom+"*";
