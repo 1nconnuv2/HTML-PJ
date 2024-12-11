@@ -16,7 +16,8 @@ function supprimer(){
     f1.clearRect(0,0,40,41)
 }
 function leave(e){
-    e.currentTarget.className="pleine";
+    if (e.currentTarget.className == "dessus")
+        e.currentTarget.className="vide";
 }
 function drop(e){
     e.preventDefault();
