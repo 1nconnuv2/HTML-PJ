@@ -10,8 +10,14 @@ function over(e){
         
 }
 
+function supprimer(){
+    var carre = document.getElementById("false");
+    var f1 = carre.getContext("2d");
+    f1.clearRect(0,0,40,41)
+}
 function leave(e){
-    e.currentTarget.className="vide";
+    if (e.currentTarget.className == "dessus")
+        e.currentTarget.className="vide";
 }
 function drop(e){
     e.preventDefault();
@@ -37,7 +43,7 @@ function debut(){
     canva.setAttribute('height','41');
     canva.setAttribute('ondragstart','start(event)');
     canva.setAttribute('draggable','true');
-    document.getElementsByClassName("objet")[0].appendChild(canva);
+    document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue";
@@ -90,7 +96,11 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
+<<<<<<< HEAD
             document.getElementsById(case_verif).removeChild()
+=======
+            supprimer();
+>>>>>>> origin/Feur
             console.log("suppression")
         }
     }}
@@ -104,7 +114,11 @@ function disparition_colonne(x){
         var canva_suppr=document.getElementsByName(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
+<<<<<<< HEAD
             document.getElementById(case_verif).removeChild()
+=======
+            supprimer();
+>>>>>>> origin/Feur
             console.log("suppression")
         }
     }}
