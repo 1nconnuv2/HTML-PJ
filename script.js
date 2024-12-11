@@ -11,7 +11,9 @@ function over(e){
 }
 
 function leave(e){
-    e.currentTarget.className="vide";
+    if (e.currentTarget.className=="dessus"){
+        e.currentTarget.className="vide"; 
+    }
 }
 function drop(e){
     e.preventDefault();
