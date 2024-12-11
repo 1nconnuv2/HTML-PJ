@@ -17,7 +17,7 @@ function drop(e){
     e.preventDefault();
     var obj = e.dataTransfer.getData("text");
     e.target.appendChild(document.getElementById(obj));
-    e.currentTarget.className="pleins";
+    e.currentTarget.className="pleine";
     e.stopPropagation();
     id = document.getElementById("carre");
     id.setAttribute("id","false");
@@ -37,7 +37,7 @@ function debut(){
     canva.setAttribute('height','41');
     canva.setAttribute('ondragstart','start(event)');
     canva.setAttribute('draggable','true');
-    document.getElementsByClassName("objet")[0].appendChild(canva);
+    document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue";
