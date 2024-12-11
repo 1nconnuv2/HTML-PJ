@@ -18,7 +18,7 @@ function drop(e){
     e.preventDefault();
     var obj = e.dataTransfer.getData("text");
     e.target.appendChild(document.getElementById(obj));
-    e.currentTarget.className="pleins";
+    e.currentTarget.className="pleine";
     e.stopPropagation();
     id = document.getElementById("forme");
     id.setAttribute(draggable,false);
@@ -26,7 +26,7 @@ function drop(e){
     var nom=e.currentTarget.id;
     nom=nom+"*";
     e.name= nom;
-    console.log(e.name);
+    console.log("nom du canva",e.name);
     e.stopPropagation();
     verification();
 }
