@@ -15,6 +15,7 @@ function supprimer(placement){
     var f1 =  document.getElementById(placement+"*");
     f1=f1.getContext("2d")
     f1.clearRect(0,0,40,41)
+    carre.innerHTML=""
 
 }
 function leave(e){
