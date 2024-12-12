@@ -38,14 +38,14 @@ function drop(e){
         e.stopPropagation();
         verification();
 }
-function debut(){
+function ligne4(){
     for(var j=0; j<4;j++){
         var canva = document.createElement('canvas');
         var carre = 'carre'+j
         canva.setAttribute('id',carre);
         canva.setAttribute('width','40');
         canva.setAttribute('height','41');
-        document.getElementsByClassName(carre)[j].appendChild(canva);
+        document.getElementsByClassName('carre')[j].appendChild(canva);
         carre = document.getElementById(carre);
         var f1 = carre.getContext("2d");
         f1.fillStyle = "Blue" ;
@@ -54,10 +54,7 @@ function debut(){
     }
 }
 function piece(){
-    debut();
-    debut2();
-    debut3();
-    debut4();
+    ligne4();
     var piece = document.getElementsByClassName("piece")[0];
     piece.setAttribute('draggable','true');
     piece.setAttribute('ondragstart','start(event)');
