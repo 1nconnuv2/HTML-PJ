@@ -13,7 +13,7 @@ function over(e){
 function supprimer(){
     var carre = document.getElementById("false");
     var f1 = carre.getContext("2d");
-    f1.clearRect(0,0,40,40)
+    f1.clearRect(0,0,40,41)
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
