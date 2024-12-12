@@ -1,5 +1,6 @@
 debut();
 var suite_de_combo = 0
+var meilleur_combo = 0
 
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
@@ -26,6 +27,7 @@ function leave(e){
     if (e.currentTarget.className == "dessus")
         e.currentTarget.className="vide";
 }
+
 function drop(e){
     e.preventDefault();
     var obj = e.dataTransfer.getData("text");
@@ -162,11 +164,15 @@ function verification(){
         }
     }
 
-    var point = combo(nb)
+    var point= combo(nb)
     console.log("nombre de point ",point)
     ligne_pleine.forEach((element) => disparition_ligne(element));
-    console.log(ligne_pleine)
     colonne_pleine.forEach((element) => disparition_colonne(element));
-    console.log(colonne_pleine)
     document.getElementById("score").innerText=parseInt(document.getElementById("score").innerHTML)+point
+    document.getElementById("combo_en_cours").innerText=suite_de_combo
+    
+    if(suite_de_combo>meilleur_combo){
+        meilleur_combo=suite_de_combo
+        document.getElementById("meilleur_combo").innerText=meilleur_combo
+    }
 }

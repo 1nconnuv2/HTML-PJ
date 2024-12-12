@@ -51,9 +51,16 @@
     display: block;
 }
 
-.scoring{
+#tableau_scoring{
     text-align: center;
     background-color: #cccccccc;
+}
+
+.scoring{
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: xx-large;
 }
 
 #fond{
