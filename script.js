@@ -16,14 +16,13 @@ function supprimer(placement){
     f1=f1.getContext("2d")
     f1.clearRect(0,0,40,41)
     carre.innerHTML=""
-
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
         e.currentTarget.className="vide";
 }
 function drop(e){
-    if (e.currentTarget.className != "pleine")
+    if (e.currentTarget.className == "pleine")
         e.preventDefault();
         var obj = e.dataTransfer.getData("text");
         e.target.appendChild(document.getElementById(obj));
@@ -53,11 +52,11 @@ function debut(){
 }
 function debut2(){
     var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre');
+    canva.setAttribute('id','carre2');
     canva.setAttribute('width','40');
     canva.setAttribute('height','41');
     document.getElementsByClassName("carre")[1].appendChild(canva);
-    var carre = document.getElementById("carre");
+    var carre = document.getElementById("carre2");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue" ;
     f1.rect(1,3,38,40);
@@ -65,11 +64,11 @@ function debut2(){
 }
 function debut3(){
     var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre');
+    canva.setAttribute('id','carre3');
     canva.setAttribute('width','40');
     canva.setAttribute('height','41');
     document.getElementsByClassName("carre")[2].appendChild(canva);
-    var carre = document.getElementById("carre");
+    var carre = document.getElementById("carre3");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue" ;
     f1.rect(1,3,38,40);
@@ -77,11 +76,11 @@ function debut3(){
 }
 function debut4(){
     var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre');
+    canva.setAttribute('id','carre4');
     canva.setAttribute('width','40');
     canva.setAttribute('height','41');
     document.getElementsByClassName("carre")[3].appendChild(canva);
-    var carre = document.getElementById("carre");
+    var carre = document.getElementById("carre4");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue" ;
     f1.rect(1,3,38,40);
@@ -93,7 +92,8 @@ function piece(){
     debut3();
     debut4();
     var piece = document.getElementsByClassName("piece")[0];
-    piece.setAttribute('draggable','true')
+    piece.setAttribute('draggable','true');
+    piece.setAttribute('ondragstart','start(event)');
 }
 function verif_ligne(x){
     nb=0;
