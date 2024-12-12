@@ -45,9 +45,9 @@
     z-index: 1;
 }
 .pioche{
-    height: 8%;
+    height: 100%;
+    width:100%;
     text-align: center;
     background-color:#cccccccc;
-    padding : 10px;
         
 }
