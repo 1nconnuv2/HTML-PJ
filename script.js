@@ -65,13 +65,7 @@ function debut2(){
 function debut3(){
     var canva = document.createElement('canvas');
     canva.setAttribute('id','carre3');
-    canva.setAttributetext
-    text
-    text
-    text
-    text
-    text
-    Text('width','40');
+    canva.setAttribute('width','40');
     canva.setAttribute('height','41');
     document.getElementsByClassName("carre")[2].appendChild(canva);
     var carre = document.getElementById("carre3");
