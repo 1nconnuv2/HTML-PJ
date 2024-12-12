@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #tapis{
       --taille : 10;
 
@@ -18,17 +18,28 @@
     grid-template-columns: auto auto auto auto auto auto auto  ;
     padding : 0.3vh;
     z-index: 1;
-=======
+
+}
 .jouer{
     text-align: center;
     background-color:#cccccccc;
     padding : 10px;
     
->>>>>>> Feur
 }
+
+
+.jouer{
+    text-align: center;
+    background-color:#cccccccc;
+    padding : 10px;
+    
+
+}
+
 .pleine{
     display: block;
 }
+
 .vide{
     background-color : #cccccccc;
     padding : 10px;
@@ -38,6 +49,7 @@
     height: 18px;
     display: block;
 }
+
 .dessus{
     background-color : #474747cc;
     padding : 10px;
@@ -46,10 +58,12 @@
     height: 10px;
     display: block;
 }
+
 .scoring{
     text-align: center;
     background-color: #cccccccc;
 }
+
 #fond{
     text-align: center;
     width : 100%;
@@ -61,7 +75,7 @@
     text-align: center;
     background-color:#76adab;
 }
-<<<<<<< HEAD
+
 
 .jouer{
     text-align: center;
@@ -71,7 +85,8 @@
 .nean{
     margin: 0%;
 }
-=======
+
+
 #tapis{
     margin : auto;
     margin: left 0px;;
@@ -83,4 +98,3 @@
     padding : 0.3vh;
     z-index: 1;
 }
->>>>>>> Feur

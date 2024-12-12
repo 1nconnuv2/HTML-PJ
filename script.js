@@ -10,24 +10,17 @@ function over(e){
         
 }
 
-<<<<<<< HEAD
-function supprimer(){
-    var carre = document.getElementById("false");
-    var f1 = carre.getContext("2d");
-<<<<<<< HEAD
-    f1.clearRect(0,0,40,41)
-=======
+
 function supprimer(placement){
     console.log("placement",placement)
     var carre = document.getElementById(placement);
-    var f1 = carre.getContext("2d");
+    var f1 = document.getElementById(placement+"*");
+    f1= f1.getContext("2d");
     f1.clearRect(0,0,40,41)
-    f1.setAttribute("class","nean")
->>>>>>> plan-travail
-=======
-    f1.clearRect(0,0,40,40)
->>>>>>> Feur
+    carre.innerHTML=""
+
 }
+
 function leave(e){
     if (e.currentTarget.className == "dessus")
         e.currentTarget.className="vide";
@@ -108,18 +101,8 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-<<<<<<< HEAD
-<<<<<<< HEAD
-            document.getElementsById(case_verif).removeChild()
-=======
-            supprimer();
->>>>>>> origin/Feur
-            console.log("suppression")
-=======
-            console.log(case_verif+"*")
-            supprimer(case_verif+"*");
-            
->>>>>>> plan-travail
+            supprimer(case_verif);
+
         }
     }}
 
@@ -132,18 +115,8 @@ function disparition_colonne(x){
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-<<<<<<< HEAD
-<<<<<<< HEAD
-            document.getElementById(case_verif).removeChild()
-=======
-            supprimer();
->>>>>>> origin/Feur
-            console.log("suppression")
-=======
-            console.log(case_verif+"*")
-            supprimer(case_verif+"*");
-            
->>>>>>> plan-travail
+            supprimer(case_verif);
+
         }
     }}
 
