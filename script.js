@@ -13,9 +13,11 @@ function over(e){
 function supprimer(placement){
     console.log("placement",placement)
     var carre = document.getElementById(placement);
-    var f1 = carre.getContext("2d");
+    var f1 = document.getElementById(placement+"*");
+    var f1 = f1.getContext("2d");
     f1.clearRect(0,0,40,41)
-    f1.setAttribute("class","nean")
+    carre.innerHTML=""
+
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
@@ -47,6 +49,7 @@ function debut(){
     document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
+    f1.beginPath();
     f1.fillStyle = "Blue";
     f1.rect(0,3,40,40);
     f1.fill();
@@ -97,8 +100,7 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            console.log(case_verif+"*")
-            supprimer(case_verif+"*");
+            supprimer(case_verif);
             
         }
     }}
@@ -112,8 +114,7 @@ function disparition_colonne(x){
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            console.log(case_verif+"*")
-            supprimer(case_verif+"*");
+            supprimer(case_verif);
             
         }
     }}
