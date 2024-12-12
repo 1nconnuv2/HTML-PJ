@@ -1,4 +1,6 @@
 debut();
+var suite_de_combo = 0
+
 function start(e){
     e.dataTransfer.setData("text", e.target.id);
 }
@@ -100,7 +102,6 @@ function disparition_ligne(x){
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
-            console.log(case_verif+"*")
             supprimer(case_verif);
         }
     }}
@@ -110,7 +111,6 @@ function disparition_colonne(x){
     for(var j=0; j<7;j++){
         var J=j.toString()
         var case_verif= J+"-"+I
-        console.log(case_verif)
         var canva_suppr=document.getElementById(case_verif+"*")
         document.getElementById(case_verif).className='vide'
         if (canva_suppr!=null){
@@ -118,6 +118,28 @@ function disparition_colonne(x){
         }
     }}
 
+function combo(nombre){
+    var score = 0
+    if (nombre==0){
+        suite_de_combo=0
+    }
+
+    else{
+        suite_de_combo=suite_de_combo+nombre
+        nombre=suite_de_combo
+    }
+
+    console.log(nombre)
+    if(nombre==1){
+        score=1
+    }
+    else if (2<=nombre){
+        score=Math.trunc(nombre+1,5**nombre)
+        console.log("score",score)
+    }
+    return(score)
+
+}
 
 function verification(){
     let ligne_pleine=[]
@@ -139,7 +161,12 @@ function verification(){
             nb++
         }
     }
+
+    var point = combo(nb)
+    console.log("nombre de point ",point)
     ligne_pleine.forEach((element) => disparition_ligne(element));
+    console.log(ligne_pleine)
     colonne_pleine.forEach((element) => disparition_colonne(element));
-    document.getElementById("score").innerText=parseInt(document.getElementById("score").innerHTML)+nb
+    console.log(colonne_pleine)
+    document.getElementById("score").innerText=parseInt(document.getElementById("score").innerHTML)+point
 }
