@@ -18,6 +18,7 @@
     grid-template-columns: auto auto auto auto auto auto auto  ;
     padding : 0.3vh;
     z-index: 1;
+}
 
 .jouer{
     text-align: center;
@@ -84,5 +85,3 @@
     padding : 0.3vh;
     z-index: 1;
 }
-
-
