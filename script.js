@@ -13,7 +13,7 @@ function supprimer(placement){
     console.log("placement",placement);
     var carre = document.getElementById(placement);
     var f1 = carre.getContext("2d");
-    f1.clearRect(0,0,41,41)
+    f1.clearRect(0,0,40,41)
     f1.className="nean";
 }
 function leave(e){
@@ -48,7 +48,7 @@ function debut(){
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
     f1.fillStyle = "Blue" ;
-    f1.rect(0,3,40,40);
+    f1.rect(1,3,38,40);
     f1.fill();
 }
 
