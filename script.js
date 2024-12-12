@@ -22,13 +22,13 @@ function leave(e){
         e.currentTarget.className="vide";
 }
 function drop(e){
-    if (e.currentTarget.className == "pleine")
+    if (e.currentTarget.className == "vide")
         e.preventDefault();
         var obj = e.dataTransfer.getData("text");
         e.target.appendChild(document.getElementById(obj));
         e.currentTarget.className="pleine";
         e.stopPropagation();
-        id = document.getElementById("piece");
+        id = document.getElementsByClassName("piece")[0];
         var nom=e.currentTarget.id;
         nom=nom+"*";
         id.setAttribute("id",nom);
@@ -65,7 +65,13 @@ function debut2(){
 function debut3(){
     var canva = document.createElement('canvas');
     canva.setAttribute('id','carre3');
-    canva.setAttribute('width','40');
+    canva.setAttributetext
+    text
+    text
+    text
+    text
+    text
+    Text('width','40');
     canva.setAttribute('height','41');
     document.getElementsByClassName("carre")[2].appendChild(canva);
     var carre = document.getElementById("carre3");
