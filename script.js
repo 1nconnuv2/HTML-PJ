@@ -9,44 +9,33 @@ function over(e){
         e.currentTarget.className="dessus";
         
 }
-
-<<<<<<< HEAD
-function supprimer(){
-    var carre = document.getElementById("false");
-    var f1 = carre.getContext("2d");
-<<<<<<< HEAD
-    f1.clearRect(0,0,40,41)
-=======
 function supprimer(placement){
-    console.log("placement",placement)
+    console.log("placement",placement);
     var carre = document.getElementById(placement);
     var f1 = carre.getContext("2d");
-    f1.clearRect(0,0,40,41)
-    f1.setAttribute("class","nean")
->>>>>>> plan-travail
-=======
-    f1.clearRect(0,0,40,40)
->>>>>>> Feur
+    f1.clearRect(0,0,41,41)
+    f1.className="nean";
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
         e.currentTarget.className="vide";
 }
 function drop(e){
-    e.preventDefault();
-    var obj = e.dataTransfer.getData("text");
-    e.target.appendChild(document.getElementById(obj));
-    e.currentTarget.className="pleine";
-    e.stopPropagation();
-    id = document.getElementById("carre");
-    var nom=e.currentTarget.id;
-    nom=nom+"*";
-    id.setAttribute("id",nom);
-    id.setAttribute("draggable","false");
-    console.log(id.id)
-    debut();
-    e.stopPropagation();
-    verification();
+    if (e.currentTarget.className == "pleine")
+        e.preventDefault();
+        var obj = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(obj));
+        e.currentTarget.className="pleine";
+        e.stopPropagation();
+        id = document.getElementById("carre");
+        var nom=e.currentTarget.id;
+        nom=nom+"*";
+        id.setAttribute("id",nom);
+        id.setAttribute("draggable","false");
+        console.log(id.id)
+        debut();
+        e.stopPropagation();
+        verification();
 }
 function debut(){
     var canva = document.createElement('canvas');
@@ -82,68 +71,50 @@ function verif_ligne(x){
     }
 };
 function verif_colonne(x){
-    nb=0
-    var I=x.toString()
+    nb=0;
+    var I=x.toString();
     for(var j=0; j<7;j++){
-        var J=j.toString()
-        var case_verif= J+"-"+I
-        var c = document.getElementById(case_verif).classList.contains('pleine')
+        var J=j.toString();
+        var case_verif= J+"-"+I;
+        var c = document.getElementById(case_verif).classList.contains('pleine');
             if(c==true){
-                nb++
+                nb++;
             }
     }  
     if (nb==7){
-        return true  
+        return true  ;
     }
     else{
-        return false
+        return false;
     }
 }
 
 function disparition_ligne(x){
-    var I=x.toString()
+    var I=x.toString();
     for(var j=0; j<7;j++){
-        var J=j.toString()
-        var case_verif= I+"-"+J
-        var canva_suppr=document.getElementById(case_verif+"*")
-        document.getElementById(case_verif).className='vide'
+        var J=j.toString();
+        var case_verif= I+"-"+J;
+        var canva_suppr=document.getElementById(case_verif+"*");
+        document.getElementById(case_verif).className='vide';
         if (canva_suppr!=null){
-<<<<<<< HEAD
-<<<<<<< HEAD
-            document.getElementsById(case_verif).removeChild()
-=======
-            supprimer();
->>>>>>> origin/Feur
-            console.log("suppression")
-=======
-            console.log(case_verif+"*")
+            console.log(case_verif+"*");
             supprimer(case_verif+"*");
             
->>>>>>> plan-travail
+
         }
     }}
 
 function disparition_colonne(x){
-    var I=x.toString()
+    var I=x.toString();
     for(var j=0; j<7;j++){
-        var J=j.toString()
-        var case_verif= J+"-"+I
-        console.log(case_verif)
-        var canva_suppr=document.getElementById(case_verif+"*")
-        document.getElementById(case_verif).className='vide'
+        var J=j.toString();
+        var case_verif= J+"-"+I;
+        console.log(case_verif);
+        var canva_suppr=document.getElementById(case_verif+"*");
+        document.getElementById(case_verif).className='vide';
         if (canva_suppr!=null){
-<<<<<<< HEAD
-<<<<<<< HEAD
-            document.getElementById(case_verif).removeChild()
-=======
-            supprimer();
->>>>>>> origin/Feur
-            console.log("suppression")
-=======
-            console.log(case_verif+"*")
-            supprimer(case_verif+"*");
-            
->>>>>>> plan-travail
+            console.log(case_verif+"*");
+            supprimer(case_verif+"*");   
         }
     }}
 

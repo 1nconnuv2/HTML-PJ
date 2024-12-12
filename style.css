@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-#tapis{
-      --taille : 10;
-
-  --titre : 10vh;
-
-  --hauteur : calc(calc(100vh - var(--titre)) - 5px);
-
-  --largeur : calc(100vw - 10px);
-
-  --cote : min(calc(var(--hauteur) / calc(var(--taille) + 7)), calc(var(--largeur) / calc(var(--taille) + 1)));
-    margin : auto;
-    margin: left 0px;;
-    width: auto;
-    background-color : #c43030;
-    border-radius : 1vh;
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto auto auto auto  ;
-    padding : 0.3vh;
-    z-index: 1;
-=======
 .jouer{
     text-align: center;
     background-color:#cccccccc;
     padding : 10px;
     
->>>>>>> Feur
 }
 .pleine{
     display: block;
@@ -61,17 +39,6 @@
     text-align: center;
     background-color:#76adab;
 }
-<<<<<<< HEAD
-
-.jouer{
-    text-align: center;
-    background-color:#cccccccc;
-}
-
-.nean{
-    margin: 0%;
-}
-=======
 #tapis{
     margin : auto;
     margin: left 0px;;
@@ -83,4 +50,3 @@
     padding : 0.3vh;
     z-index: 1;
 }
->>>>>>> Feur
