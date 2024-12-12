@@ -39,52 +39,19 @@ function drop(e){
         verification();
 }
 function debut(){
-    var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre');
-    canva.setAttribute('width','40');
-    canva.setAttribute('height','41');
-    document.getElementsByClassName("carre")[0].appendChild(canva);
-    var carre = document.getElementById("carre");
-    var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue" ;
-    f1.rect(1,3,38,40);
-    f1.fill();
-}
-function debut2(){
-    var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre2');
-    canva.setAttribute('width','40');
-    canva.setAttribute('height','41');
-    document.getElementsByClassName("carre")[1].appendChild(canva);
-    var carre = document.getElementById("carre2");
-    var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue" ;
-    f1.rect(1,3,38,40);
-    f1.fill();
-}
-function debut3(){
-    var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre3');
-    canva.setAttribute('width','40');
-    canva.setAttribute('height','41');
-    document.getElementsByClassName("carre")[2].appendChild(canva);
-    var carre = document.getElementById("carre3");
-    var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue" ;
-    f1.rect(1,3,38,40);
-    f1.fill();
-}
-function debut4(){
-    var canva = document.createElement('canvas');
-    canva.setAttribute('id','carre4');
-    canva.setAttribute('width','40');
-    canva.setAttribute('height','41');
-    document.getElementsByClassName("carre")[3].appendChild(canva);
-    var carre = document.getElementById("carre4");
-    var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue" ;
-    f1.rect(1,3,38,40);
-    f1.fill();
+    for(var j=0; j<4;j++){
+        var canva = document.createElement('canvas');
+        var carre = 'carre'+j
+        canva.setAttribute('id',carre);
+        canva.setAttribute('width','40');
+        canva.setAttribute('height','41');
+        document.getElementsByClassName(carre)[j].appendChild(canva);
+        carre = document.getElementById(carre);
+        var f1 = carre.getContext("2d");
+        f1.fillStyle = "Blue" ;
+        f1.rect(1,3,38,40);
+        f1.fill();
+    }
 }
 function piece(){
     debut();
@@ -185,4 +152,8 @@ function verification(){
     ligne_pleine.forEach((element) => disparition_ligne(element));
     colonne_pleine.forEach((element) => disparition_colonne(element));
     document.getElementById("score").innerText=parseInt(document.getElementById("score").innerHTML)+nb
+}
+
+function posage_forme(e){
+
 }
