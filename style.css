@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #tapis{
       --taille : 10;
 
@@ -17,6 +18,13 @@
     grid-template-columns: auto auto auto auto auto auto auto  ;
     padding : 0.3vh;
     z-index: 1;
+=======
+.jouer{
+    text-align: center;
+    background-color:#cccccccc;
+    padding : 10px;
+    
+>>>>>>> Feur
 }
 .pleine{
     display: block;
@@ -53,6 +61,7 @@
     text-align: center;
     background-color:#76adab;
 }
+<<<<<<< HEAD
 
 .jouer{
     text-align: center;
@@ -62,3 +71,16 @@
 .nean{
     margin: 0%;
 }
+=======
+#tapis{
+    margin : auto;
+    margin: left 0px;;
+    width: auto;
+    background-color : #c43030;
+    border-radius : 1vh;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto auto  ;
+    padding : 0.3vh;
+    z-index: 1;
+}
+>>>>>>> Feur

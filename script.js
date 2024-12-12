@@ -14,6 +14,7 @@ function over(e){
 function supprimer(){
     var carre = document.getElementById("false");
     var f1 = carre.getContext("2d");
+<<<<<<< HEAD
     f1.clearRect(0,0,40,41)
 =======
 function supprimer(placement){
@@ -23,6 +24,9 @@ function supprimer(placement){
     f1.clearRect(0,0,40,41)
     f1.setAttribute("class","nean")
 >>>>>>> plan-travail
+=======
+    f1.clearRect(0,0,40,40)
+>>>>>>> Feur
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
@@ -54,7 +58,7 @@ function debut(){
     document.getElementsByClassName("carre")[0].appendChild(canva);
     var carre = document.getElementById("carre");
     var f1 = carre.getContext("2d");
-    f1.fillStyle = "Blue";
+    f1.fillStyle = "Blue" ;
     f1.rect(0,3,40,40);
     f1.fill();
 }
