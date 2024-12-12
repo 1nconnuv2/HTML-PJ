@@ -12,9 +12,10 @@ function over(e){
 function supprimer(placement){
     console.log("placement",placement);
     var carre = document.getElementById(placement);
-    var f1 = carre.getContext("2d");
+    var f1 =  document.getElementById(placement+"*");
+    f1=f1.getContext("2d")
     f1.clearRect(0,0,40,41)
-    f1.className="nean";
+
 }
 function leave(e){
     if (e.currentTarget.className == "dessus")
@@ -98,7 +99,7 @@ function disparition_ligne(x){
         document.getElementById(case_verif).className='vide';
         if (canva_suppr!=null){
             console.log(case_verif+"*");
-            supprimer(case_verif+"*");
+            supprimer(case_verif);
             
 
         }
@@ -114,7 +115,7 @@ function disparition_colonne(x){
         document.getElementById(case_verif).className='vide';
         if (canva_suppr!=null){
             console.log(case_verif+"*");
-            supprimer(case_verif+"*");   
+            supprimer(case_verif);   
         }
     }}
 

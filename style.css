@@ -1,9 +1,3 @@
-.jouer{
-    text-align: center;
-    background-color:#cccccccc;
-    padding : 10px;
-    
-}
 .pleine{
     display: block;
 }
@@ -41,7 +35,7 @@
 }
 #tapis{
     margin : auto;
-    margin: left 0px;;
+    margin: left 0px;
     width: auto;
     background-color : #c43030;
     border-radius : 1vh;
@@ -49,4 +43,11 @@
     grid-template-columns: auto auto auto auto auto auto auto  ;
     padding : 0.3vh;
     z-index: 1;
+}
+.pioche{
+    height: 8%;
+    text-align: center;
+    background-color:#cccccccc;
+    padding : 10px;
+        
 }
